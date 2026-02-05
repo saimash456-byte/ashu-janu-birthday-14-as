@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>13 Days – For Ashu 💖</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at top, #1b1b3a, #000);
+  color:white;
+  text-align:center;
+  overflow:hidden;
+}
+.slide{
+  display:none;
+  min-height:100vh;
+  padding:40px 20px;
+  position:relative;
+}
+.active{display:block;}
+
+button{
+  margin-top:30px;
+  padding:12px 26px;
+  border:none;
+  border-radius:30px;
+  font-size:18px;
+  background:white;
+  color:#ff4d6d;
+  cursor:pointer;
+}
+
+.center{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.heart{
+  font-size:90px;
+  animation:pulse 1.5s infinite;
+  cursor:pointer;
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
+}
+
+.moon{
+  font-size:100px;
+  animation:float 4s infinite ease-in-out;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-20px)}
+}
+
+/* Stars */
+.star{
+  position:absolute;
+  color:white;
+  font-size:10px;
+  opacity:0.7;
+  animation:twinkle 3s infinite;
+}
+@keyframes twinkle{
+  0%,100%{opacity:0.2}
+  50%{opacity:1}
+}
+
+/* Roses */
+.rose{
+  position:absolute;
+  top:-40px;
+  font-size:24px;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  to{top:110%;}
+}
+
+/* Balloons */
+.balloon{
+  position:absolute;
+  bottom:-60px;
+  font-size:30px;
+  animation:fly linear infinite;
+}
+@keyframes fly{
+  to{bottom:120%;}
+}
+
+.big{
+  font-size:70px;
+  font-weight:bold;
+}
+.fade{
+  animation:fade 2s infinite;
+}
+@keyframes fade{
+  0%{opacity:0.4}
+  50%{opacity:1}
+  100%{opacity:0.4}
+}
+</style>
+</head>
+
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide active" id="s1">
+  <div class="center">
+    <div class="moon">🌙</div>
+    <div class="heart" onclick="next(2)">❤️</div>
+    <p>A little journey before your birthday… 🌸<br>Tap to begin</p>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="s2">
+  <div class="center">
+    <h2>Do you know someone waits for you every day? 🥺</h2>
+    <button onclick="next(3)">Who?</button>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="s3">
+  <div class="center">
+    <h2 class="fade">It’s me… and my heart beats for you ❤️</h2>
+    <h3>meri pyari <b>Ashu Janu</b></h3>
+    <button onclick="next(4)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide" id="s4">
+  <div class="center">
+    <div class="big fade">13</div>
+    <p>13 days left… not just days, feelings 💖</p>
+    <div class="heart" onclick="next(5)">❤️</div>
+  </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide" id="s5">
+  <div class="center">
+    <p>In these days, I think of your smile… again & again 🌹</p>
+    <button onclick="next(6)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide" id="s6">
+  <div class="center">
+    <p>When you smile… my world stops ✨</p>
+    <button onclick="next(7)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide" id="s7">
+  <div class="center">
+    <p>We’re getting closer… can you feel it? 🎈</p>
+    <button onclick="next(8)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide" id="s8">
+  <div class="center">
+    <p>Because someone special was born… 👑</p>
+    <h2>Ashu</h2>
+    <button onclick="next(9)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 9 -->
+<div class="slide" id="s9">
+  <div class="center">
+    <p>Not today… but very soon 🎂</p>
+    <button onclick="next(10)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide" id="s10">
+  <div class="center">
+    <p>
+      Every day brings me closer to Ashu’s smile 💕<br>
+      Counting 13 days for her special day ✨
+    </p>
+    <button onclick="next(11)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 11 -->
+<div class="slide" id="s11">
+  <div class="center">
+    <p>I promise… I’ll always celebrate you 🌈</p>
+    <button onclick="next(12)">Next</button>
+  </div>
+</div>
+
+<!-- SLIDE 12 -->
+<div class="slide" id="s12">
+  <div class="center">
+    <p>Are you ready for your day? 😌</p>
+    <button onclick="next(13)">Almost…</button>
+  </div>
+</div>
+
+<!-- SLIDE 13 -->
+<div class="slide" id="s13">
+  <div class="center">
+    <h1>Advance Happy Birthday 🎉</h1>
+    <h2>Meri <b>Sakoon-e-Qalb</b> 💖</h2>
+    <p>meri pyari Ashu Janu</p>
+  </div>
+</div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+function next(n){
+  slides.forEach(s=>s.classList.remove('active'));
+  document.getElementById('s'+n).classList.add('active');
+  if(n===5) roses();
+  if(n===7 || n===13) balloons();
+}
+
+function roses(){
+  for(let i=0;i<20;i++){
+    let r=document.createElement('div');
+    r.className='rose';
+    r.innerText='🌹';
+    r.style.left=Math.random()*100+'%';
+    r.style.animationDuration=4+Math.random()*3+'s';
+    document.body.appendChild(r);
+  }
+}
+
+function balloons(){
+  for(let i=0;i<20;i++){
+    let b=document.createElement('div');
+    b.className='balloon';
+    b.innerText='🎈';
+    b.style.left=Math.random()*100+'%';
+    b.style.animationDuration=5+Math.random()*4+'s';
+    document.body.appendChild(b);
+  }
+}
+</script>
+
+</body>
+</html>
