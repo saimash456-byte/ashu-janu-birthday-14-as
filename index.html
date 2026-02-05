@@ -3,35 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>13 Days – For Ashu 💖</title>
+<title>13 Days – For My Pyari Ashu Janu 💖</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(circle at top, #1b1b3a, #000);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ff9a9e 0%,
+    #fad0c4 35%,
+    #fbc2eb 65%,
+    #a18cd1 100%
+  );
+  background-size: 400% 400%;
+  animation: romanticBG 14s ease infinite;
   color:white;
   text-align:center;
   overflow:hidden;
 }
+
+@keyframes romanticBG{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
 .slide{
   display:none;
   min-height:100vh;
   padding:40px 20px;
-  position:relative;
 }
 .active{display:block;}
-
-button{
-  margin-top:30px;
-  padding:12px 26px;
-  border:none;
-  border-radius:30px;
-  font-size:18px;
-  background:white;
-  color:#ff4d6d;
-  cursor:pointer;
-}
 
 .center{
   display:flex;
@@ -41,118 +45,97 @@ button{
   height:100vh;
 }
 
+button{
+  margin-top:30px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  font-size:18px;
+  background:white;
+  color:#ff4d6d;
+  cursor:pointer;
+}
+
 .heart{
   font-size:90px;
   animation:pulse 1.5s infinite;
   cursor:pointer;
 }
 @keyframes pulse{
-  0%{transform:scale(1)}
+  0%,100%{transform:scale(1)}
   50%{transform:scale(1.3)}
-  100%{transform:scale(1)}
-}
-
-.moon{
-  font-size:100px;
-  animation:float 4s infinite ease-in-out;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-20px)}
-}
-
-/* Stars */
-.star{
-  position:absolute;
-  color:white;
-  font-size:10px;
-  opacity:0.7;
-  animation:twinkle 3s infinite;
-}
-@keyframes twinkle{
-  0%,100%{opacity:0.2}
-  50%{opacity:1}
-}
-
-/* Roses */
-.rose{
-  position:absolute;
-  top:-40px;
-  font-size:24px;
-  animation:fall linear infinite;
-}
-@keyframes fall{
-  to{top:110%;}
-}
-
-/* Balloons */
-.balloon{
-  position:absolute;
-  bottom:-60px;
-  font-size:30px;
-  animation:fly linear infinite;
-}
-@keyframes fly{
-  to{bottom:120%;}
 }
 
 .big{
-  font-size:70px;
+  font-size:80px;
   font-weight:bold;
+  animation:pulse 1.5s infinite;
 }
+
 .fade{
   animation:fade 2s infinite;
 }
 @keyframes fade{
-  0%{opacity:0.4}
+  0%,100%{opacity:0.4}
   50%{opacity:1}
-  100%{opacity:0.4}
+}
+
+.rose,.balloon{
+  position:absolute;
+  font-size:26px;
+  animation:float linear infinite;
+}
+@keyframes float{
+  to{transform:translateY(-120vh);}
 }
 </style>
 </head>
 
 <body>
 
+<!-- 🎵 MUSIC -->
+<audio id="bgm" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7cbbefb3a5.mp3">
+</audio>
+
 <!-- SLIDE 1 -->
 <div class="slide active" id="s1">
   <div class="center">
-    <div class="moon">🌙</div>
-    <div class="heart" onclick="next(2)">❤️</div>
-    <p>A little journey before your birthday… 🌸<br>Tap to begin</p>
+    <div class="heart" onclick="start()">❤️</div>
+    <p>A little journey before your birthday… 🌸<br>Tap the heart</p>
   </div>
 </div>
 
-<!-- SLIDE 2 -->
+<!-- SLIDE 2 (AUTO) -->
 <div class="slide" id="s2">
   <div class="center">
-    <h2>Do you know someone waits for you every day? 🥺</h2>
-    <button onclick="next(3)">Who?</button>
+    <h2>Do you know…</h2>
+    <p>someone thinks of you every day? 🥺</p>
   </div>
 </div>
 
-<!-- SLIDE 3 -->
+<!-- SLIDE 3 (AUTO) -->
 <div class="slide" id="s3">
   <div class="center">
-    <h2 class="fade">It’s me… and my heart beats for you ❤️</h2>
-    <h3>meri pyari <b>Ashu Janu</b></h3>
-    <button onclick="next(4)">Next</button>
+    <h2 class="fade">It’s me…</h2>
+    <p>and my heart chooses you ❤️</p>
+    <p><b>meri pyari Ashu Janu</b></p>
   </div>
 </div>
 
 <!-- SLIDE 4 -->
 <div class="slide" id="s4">
   <div class="center">
-    <div class="big fade">13</div>
-    <p>13 days left… not just days, feelings 💖</p>
-    <div class="heart" onclick="next(5)">❤️</div>
+    <div class="big">13</div>
+    <p>days left… not days actually, emotions.</p>
+    <div class="heart" onclick="next()">❤️</div>
   </div>
 </div>
 
-<!-- SLIDE 5 -->
+<!-- SLIDE 5 (AUTO) -->
 <div class="slide" id="s5">
   <div class="center">
-    <p>In these days, I think of your smile… again & again 🌹</p>
-    <button onclick="next(6)">Next</button>
+    <p>In these days,<br>your smile keeps visiting my thoughts 🌹</p>
   </div>
 </div>
 
@@ -160,32 +143,30 @@ button{
 <div class="slide" id="s6">
   <div class="center">
     <p>When you smile… my world stops ✨</p>
-    <button onclick="next(7)">Next</button>
+    <button onclick="next()">Next</button>
   </div>
 </div>
 
 <!-- SLIDE 7 -->
 <div class="slide" id="s7">
   <div class="center">
-    <p>We’re getting closer… can you feel it? 🎈</p>
-    <button onclick="next(8)">Next</button>
+    <p>We’re getting closer… slowly, beautifully 🎈</p>
+    <button onclick="next()">Next</button>
   </div>
 </div>
 
-<!-- SLIDE 8 -->
+<!-- SLIDE 8 (AUTO) -->
 <div class="slide" id="s8">
   <div class="center">
-    <p>Because someone special was born… 👑</p>
+    <p>Because someone precious was born… 👑</p>
     <h2>Ashu</h2>
-    <button onclick="next(9)">Next</button>
   </div>
 </div>
 
-<!-- SLIDE 9 -->
+<!-- SLIDE 9 (AUTO) -->
 <div class="slide" id="s9">
   <div class="center">
     <p>Not today… but very soon 🎂</p>
-    <button onclick="next(10)">Next</button>
   </div>
 </div>
 
@@ -196,7 +177,7 @@ button{
       Every day brings me closer to Ashu’s smile 💕<br>
       Counting 13 days for her special day ✨
     </p>
-    <button onclick="next(11)">Next</button>
+    <button onclick="next()">Next</button>
   </div>
 </div>
 
@@ -204,7 +185,7 @@ button{
 <div class="slide" id="s11">
   <div class="center">
     <p>I promise… I’ll always celebrate you 🌈</p>
-    <button onclick="next(12)">Next</button>
+    <button onclick="next()">Next</button>
   </div>
 </div>
 
@@ -212,11 +193,11 @@ button{
 <div class="slide" id="s12">
   <div class="center">
     <p>Are you ready for your day? 😌</p>
-    <button onclick="next(13)">Almost…</button>
+    <button onclick="next()">Almost…</button>
   </div>
 </div>
 
-<!-- SLIDE 13 -->
+<!-- FINAL SLIDE -->
 <div class="slide" id="s13">
   <div class="center">
     <h1>Advance Happy Birthday 🎉</h1>
@@ -226,32 +207,48 @@ button{
 </div>
 
 <script>
-const slides=document.querySelectorAll('.slide');
-function next(n){
-  slides.forEach(s=>s.classList.remove('active'));
-  document.getElementById('s'+n).classList.add('active');
-  if(n===5) roses();
-  if(n===7 || n===13) balloons();
+let slides=document.querySelectorAll('.slide');
+let index=1;
+let autoSlides=[2,3,5,8,9];
+
+function start(){
+  document.getElementById("bgm").play();
+  next();
+}
+
+function next(){
+  slides.forEach(s=>s.classList.remove("active"));
+  index++;
+  if(index<=slides.length){
+    document.getElementById("s"+index).classList.add("active");
+    if(autoSlides.includes(index)){
+      setTimeout(next,3000);
+    }
+    if(index===5) roses();
+    if(index===7 || index===13) balloons();
+  }
 }
 
 function roses(){
-  for(let i=0;i<20;i++){
-    let r=document.createElement('div');
-    r.className='rose';
-    r.innerText='🌹';
-    r.style.left=Math.random()*100+'%';
-    r.style.animationDuration=4+Math.random()*3+'s';
+  for(let i=0;i<14;i++){
+    let r=document.createElement("div");
+    r.className="rose";
+    r.innerText="🌹";
+    r.style.left=Math.random()*100+"%";
+    r.style.bottom="-40px";
+    r.style.animationDuration=4+Math.random()*3+"s";
     document.body.appendChild(r);
   }
 }
 
 function balloons(){
   for(let i=0;i<20;i++){
-    let b=document.createElement('div');
-    b.className='balloon';
-    b.innerText='🎈';
-    b.style.left=Math.random()*100+'%';
-    b.style.animationDuration=5+Math.random()*4+'s';
+    let b=document.createElement("div");
+    b.className="balloon";
+    b.innerText="🎈";
+    b.style.left=Math.random()*100+"%";
+    b.style.bottom="-60px";
+    b.style.animationDuration=5+Math.random()*4+"s";
     document.body.appendChild(b);
   }
 }
@@ -259,3 +256,4 @@ function balloons(){
 
 </body>
 </html>
+
